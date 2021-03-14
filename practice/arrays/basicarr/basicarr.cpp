@@ -30,5 +30,9 @@ int main() {
     // number of elements in array
     cout << sizeof(a)/sizeof(int) << "\n";
 
+    // update a single element of array
+    a[5] = 100;
+    for(int &i: a) cout << i << "\n";
+
     return 0;
 }
