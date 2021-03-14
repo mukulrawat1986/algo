@@ -24,5 +24,11 @@ int main() {
     // print the elements of a
     for(int &i: a) cout << i << "\n";
 
+    // size of array in bytes
+    cout << sizeof(a) << "\n";
+
+    // number of elements in array
+    cout << sizeof(a)/sizeof(int) << "\n";
+
     return 0;
 }
