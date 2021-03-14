@@ -23,6 +23,19 @@ int binary_search(int a[], int n, int key) {
     return -1;
 }
 
+int binary_search2(int a[], int n, int key) {
+   int k = 0;
+   for(int b = n/2; b >= 1; b/=2) {
+        while(k+b<n && a[k+b]<=key) k+=b;
+   }
+
+   if (a[k] == key) {
+        return k;
+   } else {
+        return -1;
+   }
+}
+
 int main() {
     // ios::sync_with_stdio(0);
     // cin.tie(0);
@@ -40,7 +53,7 @@ int main() {
     cout << "Enter the element you want to find in the array:\n";
     cin >> key;
 
-    int res = binary_search(a, n, key);
+    int res = binary_search2(a, n, key);
     if (res == -1) {
         cout << "Key " << key << " is not in the array\n";
     } else {
