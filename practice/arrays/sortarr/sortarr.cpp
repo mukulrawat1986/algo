@@ -8,7 +8,7 @@ using namespace std;
 
 // define a comparator function
 bool compare(int a, int b) {
-    return a < b;
+    return a > b;
 }
 
 int main() {
