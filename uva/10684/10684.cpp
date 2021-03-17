@@ -16,6 +16,7 @@ int main() {
 
         for(int i=0; i<n; i++) cin >> a[i];
 
+/*
         int curr_sum = a[0];
         int max_so_far = a[0];
 
@@ -27,6 +28,16 @@ int main() {
         if (max_so_far <= 0) cout << "Losing streak.\n";
         else cout << "The maximum winning streak is " << max_so_far << ".\n";
     }
+*/
 
+        int sum=0, ans=a[0];
+        for(int i=0; i<n; i++) {
+            sum += a[i];
+            ans = max(ans, sum);
+            sum = max(sum, 0);
+        }
+        if (sum <= 0) cout << "Losing streak.\n";
+        else cout << "The maximum winning streak is " << ans << ".\n";
+    }
     return 0;
 }
